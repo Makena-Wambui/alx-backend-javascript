@@ -6,6 +6,7 @@ export default function handleProfileSignup() {
     .then((valueObj) => {
       // valueObj is the resolved value of the promise returned by uploadPhoto
       // the resolved value is an object with a key 'body'
+      // eslint-disable-next-line prefer-destructuring
       const body = valueObj.body;
       return createUser()
         .then((nameObj) => {
