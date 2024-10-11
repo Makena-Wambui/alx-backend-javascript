@@ -14,6 +14,10 @@ This project focuses on ES6 Promises, a powerful feature in JavaScript that allo
 ## Project Structure
 - `0-promise.js`: Basic promise creation and usage: Return a Promise using this prototype function getResponseFromAPI()
 
+## DevDependencies
+- Jest
+- Babel
+- ESlint
 
 ## Getting Started
 1. Clone the repository:
