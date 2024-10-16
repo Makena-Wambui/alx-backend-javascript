@@ -7,5 +7,9 @@ export default function handleProfileSignup(firstName, lastName, fileName) {
   const photo = uploadPhoto(fileName);
 
   // When the promises are all settled it should return an array
-  return Promise.allSettled([user, photo]);
+  return Promise.allSettled([user, photo])
+    .then((objectsArray) => objectsArray.map((object) => ({
+      status: object.status,
+      value: object.status === 'fulfilled' ? object.value : String(object.reason),
+    })));
 }
